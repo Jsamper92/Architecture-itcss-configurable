@@ -27,7 +27,7 @@
 /// set-grid - Mixin que ejecuta un patron de escritura en base a una variable
 /// @group grid
 
-@if map-get($map: $pattern-design, $key: mobileFirst) == true {
+@if get-scale($pattern-design, mobileFirst) == true {
   @include set-grid(min-width);
 } @else {
   @include set-grid(max-width);
