@@ -1,0 +1,28 @@
+{
+  "name": "architecture-itcss-configurable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.26.5",
+    "sass-migrator": "^1.2.2",
+    "sassdoc": "^2.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "sass --watch styles/sass/main.scss:main.css",
+    "sassdoc": "sassdoc styles/**/*.scss -v",
+    "migrator": "sass-migrator --migrate-deps module styles/sass/main.scss --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsamper92/Architecture-itcss-configurable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jsamper92/Architecture-itcss-configurable/issues"
+  },
+  "homepage": "https://github.com/Jsamper92/Architecture-itcss-configurable#readme"
+}

@@ -1,0 +1,34 @@
+/// set-grid Mixin que genera la grid en función de la configuración $pattern-design
+/// @param {type} $rule - Variable que define la regla de la media querie
+/// @group grid
+
+@mixin set-grid($rule) {
+  $columns: map-get(
+    $map: $grid,
+    $key: "col",
+  );
+  @each $breakpoint, $break in $breakpoints {
+    @media only screen and ($rule: $break) {
+      @for $i from 1 through $columns {
+        $valor: unquote((100 / $columns * $i) + "%");
+        .col-#{$breakpoint}-#{$i} {
+          box-sizing: border-box;
+          padding: 0 map-get($map: $grid, $key: "gutter");
+          flex: 0 0 $valor;
+          min-width: $valor;
+          max-width: $valor;
+        }
+      }
+    }
+  }
+}
+
+
+/// set-grid - Mixin que ejecuta un patron de escritura en base a una variable
+/// @group grid
+
+@if map-get($map: $pattern-design, $key: mobileFirst) == true {
+  @include set-grid(min-width);
+} @else {
+  @include set-grid(max-width);
+}
