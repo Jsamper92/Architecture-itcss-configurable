@@ -11,7 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:sass": "sass styles/sass/main.scss:main.css",
+    "build:sass": "sass styles/sass/main.scss:compilation/main.css",
     "sassdoc": "sassdoc 'styles/**/*.scss' -v",
     "migrator": "sass-migrator --migrate-deps module styles/sass/main.scss --verbose"
   },

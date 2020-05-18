@@ -6,22 +6,26 @@
 ///   @font-face {
 ///     font-family: font-regular;
 ///     font-display: auto;
-///     src: url("/sass/fonts/barlow-regular.ttf");
+///     src: url("/sass/fonts/barlow-italic.ttf") format("ttf"), url("/sass/fonts/barlow-italic.woff") format("woff"),
+///          url("/sass/fonts/barlow-italic.eot") format("eot"), url("/sass/fonts/barlow-italic.otf") format("otf"),
+///          url("/sass/fonts/barlow-italic.svg") format("svg");
 ///     font-style: normal;
 ///     font-weight: 500;
 ///   }
 /// @group fonts
 
 @mixin font-face($name, $file, $weight:500) {
+  @if $file != sans-serif {
     @font-face {
-      font-family: $name,map-get($map: $fonts, $key: $font-default);
+      font-family: $name,map-get($map: $fonts, $key: font-default);
       font-display: auto;
-      src: url($font-path + $file);
+      src: set-url-font($file);
       font-style: normal;
       font-weight: $weight;
     }
   }
+  }
   
   @each $name, $file in $fonts{
-    @include font-face($name,$file);
+      @include font-face($name,$file);
   }

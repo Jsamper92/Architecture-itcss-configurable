@@ -30,17 +30,12 @@ $marginType: (
 	pr: padding-right
 );
 
-/// $space-base Variable que define el valor exponencial de un margen al anterior
-/// @type number
-/// @group spacing
-$spacer-base:5;
-
 @each $margin, $margin-property in $marginType {
 	@each $breakpoint, $break in $breakpoints {
 		@for $i from 1 through 20 {
-			$valor: unquote($spacer-base*$i + 'px');
+			$valor: $spacer-base*$i;
 			.#{$margin}-#{$breakpoint}-#{$i} {
-				@media (min-width: $break) {
+				@media ( get-pattern(): $break) {
 					#{$margin-property}: $valor;
 				}
 			}

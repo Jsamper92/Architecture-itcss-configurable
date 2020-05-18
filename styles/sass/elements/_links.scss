@@ -1,0 +1,6 @@
+@each $list, $content in $font-size-elements {
+    @if $list == body and set-exactly-selector($content, a) == true {
+      @include generate-selector($content);
+    }
+  }
+  
