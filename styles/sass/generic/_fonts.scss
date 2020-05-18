@@ -2,7 +2,7 @@
 /// @param {any} $name - Nombre de la fuente de texto
 /// @param {any} $file - Nombre del archivo de la fuente
 /// @param {any} $weight [500] - Grosor de la fuente
-/// @example 
+/// @example
 ///   @font-face {
 ///     font-family: font-regular;
 ///     font-display: auto;
@@ -14,18 +14,18 @@
 ///   }
 /// @group fonts
 
-@mixin font-face($name, $file, $weight:500) {
+@mixin font-face($name, $file, $weight: 500) {
   @if $file != sans-serif {
     @font-face {
-      font-family: $name,map-get($map: $fonts, $key: font-default);
+      font-family: $name, map-get($map: $fonts, $key: font-default);
       font-display: auto;
       src: set-url-font($file);
       font-style: normal;
       font-weight: $weight;
     }
   }
-  }
-  
-  @each $name, $file in $fonts{
-      @include font-face($name,$file);
-  }
+}
+
+@each $name, $file in $fonts {
+  @include font-face($name, $file);
+}

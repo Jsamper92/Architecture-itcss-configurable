@@ -1,6 +1,5 @@
-
-    @each $list, $content in $font-size-elements {
-        @if $list == heading {
-            @include generate-selector($content);
-        }
-    }
+@each $list, $content in $font-size-elements {
+  @if $list == heading {
+    @include generate-selector($content);
+  }
+}
