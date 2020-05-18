@@ -83,16 +83,18 @@
   }
 }
 
-/// Función que comprueba si dentro del arbol de $font-size-elements existe el selector html que nos interesa
+/// Función que comprueba si dentro del arbol de $font-size-elements existe el selector html que nos interesa. Devuelve true en caso de que asi lo sea
 /// @param {map} $content Variable de tipo mapa
 /// @param {string} $element Variable de tipo string que define el selector a buscar
 /// @return {boolean}
+/// @example 
+///    set-exactly-selector($content, p)
 /// @group tools
 
-@function set-exactly-selector($content,$element){
-  @each $selector,$properties in $content {
-      @if $selector == $element {
-          @return true;
-      }
+@function set-exactly-selector($content, $element) {
+  @each $selector, $properties in $content {
+    @if $selector == $element {
+      @return true;
+    }
   }
 }

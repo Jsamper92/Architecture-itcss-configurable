@@ -1,4 +1,3 @@
-
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "font-icomoon" !important;
@@ -13,9 +12,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
- @each $key, $value in $icons {
+@each $key, $value in $icons {
   .icon-#{$key}::before {
     content: $value;
   }
-} 
-
+}

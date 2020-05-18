@@ -1,7 +1,7 @@
-/// Mapa donde se alojan todos los iconos del proyecto desde una fuente icónica, de esta manera cada vez que queramos añadir un nuevo icono, simplemente tendremos 
+/// Mapa donde se alojan todos los iconos del proyecto desde una fuente icónica, de esta manera cada vez que queramos añadir un nuevo icono, simplemente tendremos
 /// que importar la nueva fuente, y el nombre del icono con su respectivo valor.
 /// @type map
-/// @example 
+/// @example
 ///  .icon-first-page::before {
 ///     content: "\e92d";
 ///  }
@@ -15,5 +15,5 @@ $icons: (
   mouse-square: "\e928",
   mouse-circle: "\e929",
   responsive-table: "\e92a",
-  arrow-down: "\e916"
+  arrow-down: "\e916",
 );

@@ -1,40 +1,37 @@
-
-
-/// Color base 
+/// Color base
 /// @group colors
 $color-base: #4a5568 !default;
 /// Color primary
-/// @group colors 
+/// @group colors
 $color-primary: #007bff !default;
 /// Color primary
-/// @group colors 
+/// @group colors
 $color-secondary: #7f19e6 !default;
 /// Color primary
-/// @group colors 
+/// @group colors
 $color-white: #fff !default;
 /// Color primary
-/// @group colors 
+/// @group colors
 $color-light: #f2f2f2 !default;
 /// Color primary
-/// @group colors 
+/// @group colors
 $color-dark: #2d3748 !default;
 /// Color primary
-/// @group colors 
+/// @group colors
 $color-black: #000 !default;
 /// Color primary
-/// @group colors 
+/// @group colors
 $color-success: #00b300 !default;
 /// Color primary
-/// @group colors 
+/// @group colors
 $color-error: #c00 !default;
-/// Color primary 
+/// Color primary
 /// @group colors
 $color-link: #007bff !default;
 
-
 /// Lista donde en base a las variables colors definidas generamos los tipos de colores
 /// @type map
-/// @requires $color-base 
+/// @requires $color-base
 /// @requires $color-primary
 /// @requires $color-secondary
 /// @requires $color-white
@@ -46,16 +43,16 @@ $color-link: #007bff !default;
 /// @requires $color-link
 /// @group colors
 $colors: (
-  'base': $color-base,
-  'primary': $color-primary,
-  'secondary': $color-secondary,
-  'white': $color-white,
+  "base": $color-base,
+  "primary": $color-primary,
+  "secondary": $color-secondary,
+  "white": $color-white,
   "light": $color-light,
   "dark": $color-dark,
-  'black': $color-black,
-  'success': $color-success,
-  'error': $color-error,
-  'link': $color-link
+  "black": $color-black,
+  "success": $color-success,
+  "error": $color-error,
+  "link": $color-link,
 ) !default;
 
 // Links

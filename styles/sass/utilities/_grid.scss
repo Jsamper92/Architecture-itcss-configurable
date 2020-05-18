@@ -8,7 +8,7 @@
     $key: "col",
   );
   @each $breakpoint, $break in $breakpoints {
-    @media only screen and ( get-pattern(): $break) {
+    @media only screen and (get-pattern(): $break) {
       @for $i from 1 through $columns {
         $valor: unquote((100 / $columns * $i) + "%");
         .col-#{$breakpoint}-#{$i} {
@@ -22,7 +22,6 @@
     }
   }
 }
-
 
 /// set-grid - Mixin que ejecuta un patron de escritura en base a una variable
 /// @group grid

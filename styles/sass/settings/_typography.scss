@@ -1,37 +1,33 @@
-
-
 /// Variable donde definimos la url de todas las fuentes
 /// @type string
 /// @group fonts
 
-$font-path: '/sass/fonts/';
+$font-path: "/sass/fonts/";
 
 /// Mapa donde se establece el nombre que aplicaremos a la fuente, y el de su archivo
 /// @type map
 /// @group fonts
 
-$fonts:(
-    font-default: sans-serif,
-    font-regular: 'barlow-regular',
-    font-italic: 'barlow-italic',
-    font-icomoon: 'icomoon',
+$fonts: (
+  font-default: sans-serif,
+  font-regular: "barlow-regular",
+  font-italic: "barlow-italic",
+  font-icomoon: "icomoon",
 );
-
-
 
 /// Función que crea todos los formatos de las fuentes
 /// @param {string} $file Nombre del archivo
 /// @return {string}
 /// @group fonts
-@function set-url-font($file){
-    @if type-of($file) == string {
-        @return url($font-path + $file + '.ttf') format("ttf"), url($font-path + $file + ".woff") format('woff')
-            ,url($font-path + $file + ".eot") format("eot"),url($font-path + $file + ".otf") format("otf")
-            ,url($font-path + $file + ".svg") format("svg");
-    }
-};
-
-
+@function set-url-font($file) {
+  @if type-of($file) == string {
+    @return url($font-path + $file + ".ttf") format("ttf"),
+      url($font-path + $file + ".woff") format("woff"),
+      url($font-path + $file + ".eot") format("eot"),
+      url($font-path + $file + ".otf") format("otf"),
+      url($font-path + $file + ".svg") format("svg");
+  }
+}
 
 /// Lista donde se especifican los elementos aplicando el tipo y tamaño de fuente teniendo en cuenta los puntos de ruptura
 /// @type map
@@ -39,65 +35,65 @@ $fonts:(
 /// @group fonts
 
 $font-size-elements: (
-    heading:(
-        h1:(
-            xs:(
-                font-family: font-regular,
-                font-size: 17px
-            ),
-            md:(
-                font-family: font-regular,
-                font-size: 20px
-            ),
-            lg:(
-                font-family: font-regular,
-                font-size: 24px
-            )
-        ),
-        h2:(
-            xs:(
-                font-family: font-regular,
-                font-size: 24px
-            ),
-            md:(
-                font-family: font-regular,
-                font-size: 24px
-            ),
-            lg:(
-                font-family: font-regular,
-                font-size: 24px
-            )
-        )
+  heading: (
+    h1: (
+      xs: (
+        font-family: font-regular,
+        font-size: 17px,
+      ),
+      md: (
+        font-family: font-regular,
+        font-size: 20px,
+      ),
+      lg: (
+        font-family: font-regular,
+        font-size: 24px,
+      ),
     ),
-    body:(
-        p:(
-            xs:(
-                font-family: font-regular,
-                font-size: 10px
-            ),
-            md:(
-                font-family: font-regular,
-                font-size: 13px
-            ),
-            lg:(
-                font-family: font-regular,
-                font-size: 16px
-            )
-        ),
-        a:(
-            xs:(
-                font-family: font-regular,
-                font-size: 10px,
-                color: map-get($colors, $key: link)
-            ),
-            md:(
-                font-family: font-regular,
-                font-size: 13px
-            ),
-            lg:(
-                font-family: font-regular,
-                font-size: 16px
-            )
-        ),
-    )
+    h2: (
+      xs: (
+        font-family: font-regular,
+        font-size: 24px,
+      ),
+      md: (
+        font-family: font-regular,
+        font-size: 24px,
+      ),
+      lg: (
+        font-family: font-regular,
+        font-size: 24px,
+      ),
+    ),
+  ),
+  body: (
+    p: (
+      xs: (
+        font-family: font-regular,
+        font-size: 10px,
+      ),
+      md: (
+        font-family: font-regular,
+        font-size: 13px,
+      ),
+      lg: (
+        font-family: font-regular,
+        font-size: 16px,
+      ),
+    ),
+    a: (
+      xs: (
+        font-family: font-regular,
+        font-size: 10px,
+        color: map-get($colors, $key: link),
+      ),
+      md: (
+        font-family: font-regular,
+        font-size: 13px,
+      ),
+      lg: (
+        font-family: font-regular,
+        font-size: 16px,
+      ),
+    ),
+  ),
 );
