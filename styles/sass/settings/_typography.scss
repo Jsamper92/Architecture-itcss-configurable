@@ -4,7 +4,7 @@
 
 $font-path: "/sass/fonts/";
 
-/// Mapa donde se establece el nombre que aplicaremos a la fuente, y el de su archivo
+/// Mapa donde se establece el nombre de las fuentes que tendrá nuestro proyecto.
 /// @type map
 /// @group fonts
 
@@ -31,7 +31,6 @@ $fonts: (
 
 /// Lista donde se especifican los elementos aplicando el tipo y tamaño de fuente teniendo en cuenta los puntos de ruptura
 /// @type map
-/// @todo Por medio de bucle aplicar en función del punto de ruptura el tipo y tamaño de fuente
 /// @group fonts
 
 $font-size-elements: (

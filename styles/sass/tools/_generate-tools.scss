@@ -2,7 +2,7 @@
 /// @param {map} $list Argumento de tipo mapa
 /// @param {any} $level Argumento que define la key del mapa
 /// @return {map}
-/// @group function
+/// @group tools
 
 @function get-scale($list, $level) {
   @return map-get($list, $level);
@@ -11,18 +11,16 @@
 /// Función que convierte los pixeles en rem
 /// @param {number} $size Argumento de tipo número
 /// @return {number}
-/// @group function
+/// @group fonts
 
 @function rem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
 
-/// Función que devuelve que devuelve el patrón de escritura definido en la configuración
-/// @return {any}
-/// @example
-///   $pattern: max-width || min-width
-/// @group function
+/// Función que devuelve el patrón de escritura definido en la configuración establecida en $pattern-design
+/// @return {string}
+/// @group grid
 @function get-pattern() {
   @if $pattern == mobileFirst {
     @return min-width;
@@ -89,7 +87,7 @@
 /// @return {boolean}
 /// @example 
 ///    set-exactly-selector($content, p)
-/// @group tools
+/// @group fonts
 
 @function set-exactly-selector($content, $element) {
   @each $selector, $properties in $content {

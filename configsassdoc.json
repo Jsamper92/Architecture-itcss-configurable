@@ -1,6 +1,6 @@
 {
     "dest": "./Sass Guidelines",
-    "basePath": "https://github.com/SassDoc/sassdoc",
+    "basePath": "https://github.com/Jsamper92/Architecture-itcss-configurable/tree/master/styles",
     "shortcutIcon": "https://www.everis.com/sites/all/themes/everis/logo.png",
     "display": {
       "access": ["public", "private"],

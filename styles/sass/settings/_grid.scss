@@ -3,7 +3,7 @@
 /// @group grid
 $pattern: min-width !default;
 
-/// $grid: Variable donde se definen los parametros de la grid
+/// Variable donde se definen los parametros de la grid
 /// @group grid
 
 $grid: (
@@ -11,7 +11,7 @@ $grid: (
   gutter: 20px,
 );
 
-/// $pattern-design: Variable que establece el patrón de escritura a la hora de generar la grid
+/// Variable que establece el patrón de escritura a la hora de generar la grid
 /// @group grid
 $pattern-design: (
   mobileFirst: false,

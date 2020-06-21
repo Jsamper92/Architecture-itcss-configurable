@@ -1,4 +1,4 @@
-/// $marginType Mapa donde alojamos todas las opciones de margin y padding teniendo en cuenta los puntos de corte
+/// Mapa donde alojamos todas las opciones de margin y padding teniendo en cuenta los puntos de corte
 /// @type map
 /// @example
 ///   @media (min-width: 0px) {
@@ -7,12 +7,12 @@
 ///		   }
 ///		  }...
 ///	  @media (min-width: 768px) {
-///		  .mt-md-1 {
+///		  .pb-md-1 {
 ///				margin-top: 5px;
 ///		   }
 ///		  }...
 ///   @media (min-width: 1200px) {
-///		  .mt-lg-1 {
+///		  .ml-lg-1 {
 ///				margin-top: 5px;
 ///		   }
 ///		  }...
@@ -29,6 +29,8 @@ $marginType: (
   pr: padding-right,
 );
 
+/// description
+/// @group spacing
 @each $margin, $margin-property in $marginType {
   @each $breakpoint, $break in $breakpoints {
     @for $i from 1 through 20 {
