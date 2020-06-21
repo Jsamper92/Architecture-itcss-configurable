@@ -13,6 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:sass": "sass styles/sass/main.scss:compilation/main.css",
     "sassdoc": "sassdoc 'styles/**/*.scss' -v",
+    "sassdoc:config": "sassdoc 'styles/**/*.scss' -c ./configsassdoc.json",
     "migrator": "sass-migrator --migrate-deps module styles/sass/main.scss --verbose"
   },
   "repository": {

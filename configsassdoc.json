@@ -1,0 +1,17 @@
+{
+    "dest": "./Sass Guidelines",
+    "basePath": "https://github.com/SassDoc/sassdoc",
+    "shortcutIcon": "https://www.everis.com/sites/all/themes/everis/logo.png",
+    "display": {
+      "access": ["public", "private"],
+      "alias": false,
+      "watermark": false
+    },
+  
+    "package": "./package.json",
+    "theme": "default",
+    "groups": {
+      "undefined": "General"
+    },
+    "descriptionPath":"./README.md"
+  }
