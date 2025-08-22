@@ -6,7 +6,7 @@
   "dependencies": {
     "sass": "^1.26.5",
     "sass-migrator": "^1.2.2",
-    "sassdoc": "^2.7.1"
+    "sassdoc": "^2.7.4"
   },
   "devDependencies": {},
   "scripts": {
